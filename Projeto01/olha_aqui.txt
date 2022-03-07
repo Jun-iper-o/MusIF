@@ -1,0 +1,59 @@
+Saída: 
+----------------------------------------
+-  Olá, você está criando sua playlist
+----------------------------------------
+Digite: Um número para a música, o nome, o gênero, o cantor, o tempo de duração e o ano de lançamento.
+----------------------------------------
+---------   Descreva a música   --------
+Número: 01
+Nome: Soca tudo
+Gênero: Funk
+Cantor: Turma Bregadeira, MC Danny
+Tempo da música: 2:06
+Ano de lançamento: 2021
+
+----------------------------------------
+-  Você deseja adicionar outra música?  
+-----------   Sim ou não?   ------------
+Sim
+
+---------   Descreva a música   --------
+Número: 02
+Nome: Licor
+Gênero: Rap
+Cantor: Budah
+Tempo da música: 4:17
+Ano de lançamento: 2019
+
+----------------------------------------
+-  Você deseja adicionar outra música?  
+----------   Sim ou não?   -------------
+Não
+
+----------------------------------------
+-  Gostaria de organizar sua Playlist?  
+----------------------------------------
+Sim
+
+----------------------------------------
+- Digite o número correspondente a opção de organização que deseja -
+01 - Da maior para menor;
+02 - Da menor para maior;
+03 - Ordem Alfabética;
+04 - Músicas do mesmo artista;
+05 - Músicas do mesmo gênero;
+06 - Músicas do mesmo ano de lançamento;
+07 - Número de identificação.
+-----------------------------------------
+01
+
+-----------------------------------------
+- Licor (4:17)
+- Soca tudo (2:06)
+
+-----------------------------------------
+-     gostaria de listar novamente?     -
+-----------   Sim ou não?   -------------
+Não
+
+-      Obrigada por usar o Musif ;p     -
