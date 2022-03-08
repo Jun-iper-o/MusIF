@@ -47,6 +47,7 @@ class Program
         Console.WriteLine();
         Console.WriteLine("-   Descreva a música   -");
         Console.WriteLine("Digite: Um número para a música, o nome, o gênero, o cantor, o tempo de duração e o ano de lançamento.");
+        Console.WriteLine();
         Console.Write("Id: ");
         int id = int.Parse(Console.ReadLine());
         Console.Write("Nome: ");
@@ -110,13 +111,21 @@ class Program
     {
       Musicas.Add(musica);
     }
-    public static void ListarMusicasMaiorParaMenor()
+    public static void ListarMusicasMaiorParaMenor(int maior)
     {
-        // listar as músicas da maior pra menor
+      var musicasPorMaior = Musicas.Select(musica => musica.descricao.getTempo() == maior);
+
+      musicasPorMaior.ForEach(musica => {
+        Console.WriteLine(musica.ToString());
+      });
     }
-    public static void ListarMusicasMenorParaMaior()
+    public static void ListarMusicasMenorParaMaior(int menor)
     {
-        // listar as músicas da menor pra maior
+      var musicasPorMenor = Musicas.Select(musica => musica.descricao.getTempo() == menor);
+
+      musicasPorMenor.ForEach(musica => {
+        Console.WriteLine(musica.ToString());
+      });
     }
     public static void ListarMusicasOrdenadas()
     {
@@ -124,26 +133,39 @@ class Program
 
       musicasOrdenadas.ForEach(musica => {
         Console.WriteLine($"Nome da Música: {musica.getNome()}")
+        Console.WriteLine($"Tempo de duração: {musica.getTempo()}")
       });
     }
-    public static void ListarMusicasMesmoArtista()
+    public static void ListarMusicasMesmoArtista(string artist)
     {
-        // listar as músicas que tem mesmo cantor
+      var musicasPorArtista = Musicas.Select(musica => musica.descricao.getCantor() == artist);
+
+      musicasPorArtista.ForEach(musica => {
+        Console.WriteLine(musica.ToString($"Cantor: {descricao.getCantor()}"));
+      });
     }
-    public static void ListarMusicasMesmoGenero()
+    public static void ListarMusicasMesmoGenero(string gener)
     {
-        // listar as músicas que tem mesmo gênero
+      var musicasPorGenero = Musicas.Select(musica => musica.descricao.getGenero() == gener);
+
+      musicasPorGenero.ForEach(musica => {
+        Console.WriteLine(musica.ToString($"Gênero: {descricao.get()}"));
+      });
     }
     public static void ListarMusicasMesmoAno(int ano)
     {
       var musicasPorAno = Musicas.Select(musica => musica.descricao.getLancamento() == ano);
 
       musicasPorAno.ForEach(musica => {
-        Console.WriteLine(musica.ToString());
+        Console.WriteLine(musica.ToString($"Ano de lançamento: {descricao.getLancamento()}"));
       });
     }
-    public static void ListarMusicasMesmoId()
+    public static void ListarMusicasMesmoId(int ident)
     {
-        // listar as músicas que tem mesmo número de identificação 
+      var musicasPorId = Musicas.Select(musica => musica.descricao.getId() == ident);
+
+      musicasPorId.ForEach(musica => {
+        Console.WriteLine(musica.ToString($"id: {musica.getId()}"));
+      });
     }
 }
