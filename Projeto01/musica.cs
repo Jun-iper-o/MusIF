@@ -1,35 +1,47 @@
 using System;
 
-class Musica {
-  private int id;
-  private string Nome;
-  private double Tempo;
-  
-  public Musica(int id, string Nome, double Tempo){
-    this.id = id;
-    this.Nome = Nome;
-    this.Tempo = Tempo;
-  }
+class Musica
+{
+    private int id;
+    private string nome;
+    private double tempo;
+    public Descricao descricao;
 
-  public void SetId(int id){
+    public Musica(int id, string nome, string genero, string cantor, double tempo, int lancamento)
+    {
         this.id = id;
-  }
-  public void SetNome(string Nome){
-        this.Nome = Nome;
-  }
-  public void SetTempo(double Tempo){
-        this.Tempo = Tempo;
-  }
-  public int Getid(){
-    return id;
-  }
-  public string GetNome(){
-    return Nome;
-  }
-  public double GetTempo(){
-    return Tempo;
-  }
-  public override string ToString(){
-    return $"{id} - {Nome} - {Tempo}";
-  }
+        this.nome = nome;
+        this.tempo = tempo;
+        this.descricao = new Descricao(id, genero, cantor, lancamento);
+    }
+
+    public void setId(int id)
+    {
+        this.id = id;
+    }
+    public void setNome(string nome)
+    {
+        this.nome = nome;
+    }
+    public void setTempo(double tempo)
+    {
+        this.tempo = tempo;
+    }
+    public int getId()
+    {
+        return this.id;
+    }
+    public string getNome()
+    {
+        return this.nome;
+    }
+    public double getTempo()
+    {
+        return this.tempo;
+    }
+    public override string ToString()
+    {
+        return $"Nome: {this.getNome()}\nTempo: {this.getTempo()}";
+    }
 }
+
